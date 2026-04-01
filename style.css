@@ -12,6 +12,9 @@ body {
     line-height: 1.6;
     scroll-behavior: smooth;
 }
+
+/* --- THE CLEANED BIO SECTION --- */
+
 /* Styling for the Bio Picture */
 .bio-pic {
     /* 1. Control the Size */
@@ -21,19 +24,21 @@ body {
 
     /* 2. Make it look nice */
     border-radius: 10px; /* Gives it slightly rounded corners */
-    border: 3px solid #ffcc00; /* The gold border (change color if needed) */
+    border: 3px solid #ffcc00; /* The gold border */
 
     /* 3. Center it */
     display: block;      /* Makes it behave like a block so we can center it */
     margin-left: auto;   /* Automatic left margin */
     margin-right: auto;  /* Automatic right margin */
     margin-bottom: 25px; /* Push the text down a bit */
-    /* Typography for the Bio */
+}
+
+/* Typography for the Bio */
 .bio-text {
-    text-align: left;       /* Aligns text to the left (easier to read) */
+    text-align: left;       /* Aligns text to the left */
     line-height: 1.8;       /* Adds more space between lines */
     font-size: 1rem;
-    color: #e0e0e0;         /* Soft white (easier on the eyes than bright white) */
+    color: #e0e0e0;         /* Soft white */
     max-width: 600px;       /* Keeps lines from getting too long */
     margin: 0 auto;         /* Centers the text block */
 }
@@ -48,20 +53,20 @@ body {
     font-weight: bold;
 }
 
-/* 2. Style the "Bold" words (The Names/Reviews) */
+/* 2. Style the "Bold" words */
 .bio-text strong {
     color: #fff;            /* Bright white to pop against the grey */
     font-weight: 700;
 }
 
-/* 3. Style the "Italic" words (The Review Quote) */
+/* 3. Style the "Italic" words */
 .bio-text em {
     color: #ffcc00;         /* Gold */
     font-style: italic;
     font-family: serif;     /* Gives it a fancy "newspaper" look */
 }
 
-}
+/* --- NAVIGATION & HERO --- */
 
 /* Navigation */
 .navbar {
@@ -100,10 +105,10 @@ body {
 .nav-links a:hover {
     color: #ff4500; /* Accent color (Orange-Red) */
 }
+
 /* Hero Section */
 .hero {
     height: 80vh;
-    /* UPDATED: Now pointing to 'head.jpg' */
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('head.jpg');
     background-size: cover;
     background-position: center;
@@ -117,9 +122,9 @@ body {
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 10px;
-    /* Kept the floating animation */
     animation: floatUpDown 3s ease-in-out infinite;
 }
+
 .btn {
     display: inline-block;
     padding: 10px 30px;
@@ -140,7 +145,7 @@ body {
 }
 
 .alt-bg {
-    background-color: #1e1e1e; /* Slightly lighter dark for contrast */
+    background-color: #1e1e1e;
     max-width: 100%;
 }
 
@@ -151,6 +156,8 @@ h2 {
     display: inline-block;
     padding-bottom: 10px;
 }
+
+/* --- MEDIA PLAYERS & GALLERY --- */
 
 /* Music Player Styling */
 .music-player-container {
@@ -168,102 +175,64 @@ audio {
     margin-top: 5px;
 }
 
-/* Gallery Grid */
 /* Gallery Grid for 2 Photos */
 .gallery-grid {
     display: grid;
-    /* This forces exactly 2 columns on most screens */
     grid-template-columns: 1fr 1fr; 
-    gap: 15px; /* Space between the two photos */
+    gap: 15px;
     margin-bottom: 30px;
 }
 
 .gallery-grid img {
     width: 100%;
-    /* MADE TALLER: 300px makes them look much more important */
     height: 300px;      
-    object-fit: cover;  /* Keeps them sharp without stretching */
+    object-fit: cover;
     border-radius: 10px;
-    border: 2px solid #333; /* subtle dark border */
-}
-
-/* On very small phones, stack them (1 on top of another) */
-@media (max-width: 400px) {
-    .gallery-grid {
-        grid-template-columns: 1fr; /* Switch to 1 column */
-    }
+    border: 2px solid #333;
 }
 
 /* High-Res Download Button - "Power Style" */
 .download-btn {
-    display: block;            /* Allows us to center it */
-    width: fit-content;        /* Makes the box wrap the text perfectly */
-    margin: 30px auto 0 auto;  /* Centers it horizontally */
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0 auto;
     
-    background-color: #ffcc00; /* Bright Gold */
-    color: #000;               /* Black Text (High Contrast) */
+    background-color: #ffcc00;
+    color: #000;
     
-    font-weight: 800;          /* Extra Bold */
+    font-weight: 800;
     font-size: 0.9rem;
-    text-transform: uppercase; /* ALL CAPS */
-    letter-spacing: 1px;       /* Spreads letters slightly */
+    text-transform: uppercase;
+    letter-spacing: 1px;
     
-    padding: 15px 35px;        /* Big click area */
-    border-radius: 50px;       /* Pill Shape */
-    text-decoration: none;     /* Removes the underline */
-    
-    /* Adds a "Glow" effect */
-    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4); 
-    transition: transform 0.2s ease; /* Smooth click animation */
-}
-
-/* Effect when you tap/click it */
-.download-btn:active {
-    transform: scale(0.95);    /* Shrinks slightly like a real button */
-}
-
-
-/* Contact & Footer */
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links a {
-    margin: 0 10px;
-    color: #fff;
+    padding: 15px 35px;
+    border-radius: 50px;
     text-decoration: none;
-    font-size: 1.2rem;
+    
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4); 
+    transition: transform 0.2s ease;
 }
 
-footer {
+.download-btn:active {
+    transform: scale(0.95);
+}
+
+/* --- CONTACT SECTION & FORMS --- */
+
+.contact-section {
+    background-color: #050505;
+    color: white;
+    padding: 80px 20px;
     text-align: center;
-    padding: 20px;
-    background: #000;
-    margin-top: 20px;
-    font-size: 0.9rem;
+    overflow: hidden;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .navbar { flex-direction: column; padding: 20px; }
-    .nav-links { margin-top: 15px; }
-}
-/* This defines the floating movement */
-@keyframes floatUpDown {
-    0% { transform: translateY(0px); }    /* Start */
-    50% { transform: translateY(-20px); } /* Move up */
-    100% { transform: translateY(0px); }  /* Move down */
-}
-
-
-/* Headings */
 .contact-section h2 {
     text-align: center;
     font-size: 3rem;
     margin-bottom: 10px;
     text-transform: uppercase;
-    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3); /* Gold glow */
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
 }
 
 .section-subtitle {
@@ -272,7 +241,6 @@ footer {
     margin-bottom: 60px;
 }
 
-/* Form Styles */
 .contact-form {
     flex: 1;
     min-width: 300px;
@@ -295,7 +263,7 @@ footer {
 .contact-form textarea {
     width: 100%;
     padding: 12px;
-    background: rgba(0, 0, 0, 0.3); /* Dark transparent background */
+    background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     border-radius: 8px;
@@ -311,11 +279,10 @@ footer {
     box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
 }
 
-/* Button */
 .submit-btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(45deg, #d4af37, #f1c40f); /* Gradient Gold */
+    background: linear-gradient(45deg, #d4af37, #f1c40f);
     border: none;
     color: black;
     font-weight: bold;
@@ -327,28 +294,17 @@ footer {
 }
 
 .submit-btn:hover {
-    transform: scale(1.02); /* Pops up slightly */
+    transform: scale(1.02);
 }
 
-/* Info Side */
 .contact-info {
     flex: 1;
     min-width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-left: 1px solid rgba(255, 255, 255, 0.1); /* Divider line */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
     padding-left: 40px;
-}
-
-/* Mobile Fix: Remove border on small screens */
-@media (max-width: 768px) {
-    .contact-info {
-        border-left: none;
-        padding-left: 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 40px;
-    }
 }
 
 .contact-info h3 {
@@ -356,35 +312,14 @@ footer {
     margin-bottom: 10px;
 }
 
-.social-links a {
-    display: block;
-    color: #bbb;
-    text-decoration: none;
-    margin-bottom: 10px;
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    color: #d4af37;
-    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
-}
-/* --- Contact Section Layout --- */
-.contact-section {
-    background-color: #050505; /* Deep black */
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-    overflow: hidden; /* Keeps bubbles inside */
-}
-
-/* --- Part 1: Booking Card Styles --- */
+/* Booking Card Styles */
 .booking-card {
     background: linear-gradient(145deg, #111, #0a0a0a);
     border: 1px solid #333;
-    border-left: 5px solid #d4af37; /* Gold accent line */
+    border-left: 5px solid #d4af37;
     padding: 40px;
     max-width: 600px;
-    margin: 0 auto 60px auto; /* Centered with space below */
+    margin: 0 auto 60px auto;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
@@ -420,10 +355,10 @@ footer {
 }
 
 .booking-link:hover {
-    color: #d4af37; /* Turns gold on hover */
+    color: #d4af37;
 }
 
-/* --- Part 2: Dancing Bubbles Styles --- */
+/* Dancing Bubbles Styles */
 .connect-title {
     text-transform: uppercase;
     color: #555;
@@ -436,19 +371,18 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Space between bubbles */
-    flex-wrap: wrap; /* Wraps on very small screens */
+    gap: 30px;
+    flex-wrap: wrap;
     min-height: 150px;
 }
 
-/* The Bubble Look */
 .social-bubble {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 120px;
     height: 120px;
-    border-radius: 50%; /* Makes it a perfect circle */
+    border-radius: 50%;
     background: #111;
     border: 2px solid #d4af37;
     color: #d4af37;
@@ -456,92 +390,118 @@ footer {
     font-weight: bold;
     font-size: 1rem;
     text-transform: uppercase;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); /* Subtle glow */
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
     transition: all 0.3s ease;
-    
-    /* THE DANCE ANIMATION */
     animation: dance 3s ease-in-out infinite;
 }
 
-/* Hover Effect: Bubble fills with gold */
 .social-bubble:hover {
     background: #d4af37;
     color: black;
     box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
-    transform: scale(1.1); /* Grows slightly */
-    animation-play-state: paused; /* Stops dancing when you try to click */
+    transform: scale(1.1);
+    animation-play-state: paused;
 }
 
-/* Stagger the animation so they don't move together */
 .bubble-insta { animation-delay: 0s; }
 .bubble-spotify { animation-delay: 0.5s; }
 .bubble-youtube { animation-delay: 1s; }
 
-/* The Up and Down Dance Keyframes */
-@keyframes dance {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); } /* Moves up 20px */
-}
-
-/* --- Footer Styles --- */
-footer {
-    background-color: black;
-    color: #444;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.8rem;
-    border-top: 1px solid #111;
-}
-/* --- Intro Splash Screen --- */
+/* --- INTRO SPLASH SCREEN --- */
 #intro-screen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* Full screen */
+    height: 100vh;
     background-color: black;
-    z-index: 9999; /* Sit on top of everything */
+    z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
-/* The Class that makes the screen fall off */
 .site-loaded {
-    transform: translateY(-100%); /* Slides up off screen */
+    transform: translateY(-100%);
     opacity: 0;
 }
 
-/* The Text Styling */
 .typing-text {
-    font-family: 'Courier New', Courier, monospace; /* Typewriter style font */
-    color: #d4af37; /* Gold */
-    font-size: 2.5rem; /* Big text */
+    font-family: 'Courier New', Courier, monospace;
+    color: #d4af37;
+    font-size: 2.5rem;
     font-weight: bold;
-    white-space: nowrap; /* Keep on one line */
-    overflow: hidden; /* Hide text until it types */
-    border-right: 4px solid #d4af37; /* The Cursor */
-    width: 0; /* Start with 0 width */
-    
-    /* The Typing Animation: 3.5s duration, 17 steps (for 17 letters) */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #d4af37;
+    width: 0;
     animation: typing 3s steps(17) forwards, blink 0.75s step-end infinite;
 }
 
-/* Typing Keyframes */
-@keyframes typing {
-    from { width: 0; }
-    to { width: 18ch; } /* 18ch = approx width of the text */
+/* --- ANIMATIONS --- */
+
+@keyframes floatUpDown {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
 }
 
-/* Cursor Blinking Keyframes */
+@keyframes dance {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 18ch; }
+}
+
 @keyframes blink {
     50% { border-color: transparent; }
 }
 
-/* Mobile Adjustment for Intro */
+/* --- MEDIA QUERIES --- */
+
 @media (max-width: 768px) {
-    .typing-text {
-        font-size: 1.5rem; /* Smaller on phone */
+    .hero h1 { font-size: 2.5rem; }
+    .navbar { flex-direction: column; padding: 20px; }
+    .nav-links { margin-top: 15px; }
+    .contact-info {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 40px;
     }
+    .typing-text { font-size: 1.5rem; }
+}
+
+@media (max-width: 400px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Social links in footer/sections */
+.social-links a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #d4af37;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #444;
+    border-top: 1px solid #111;
 }
