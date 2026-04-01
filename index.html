@@ -3,21 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Jeezi The Lantern | Official Website | Lagos R&B Artist</title>
-    <meta name="description" content="Official website of Jeezi The Lantern, Nigerian R&B singer and songwriter. Stream the latest single 'Catalinà' and watch official music videos.">
-    <meta name="keywords" content="Jeezi The Lantern, Catalinà song, Nigerian R&B, Afro-fusion, Lagos musicians, The Pit London Costain, independent artist Nigeria">
-    <meta name="author" content="MERCIVIX">
-    <link rel="canonical" href="https://jeezithelantern.com/">
-    
-    <meta property="og:title" content="Jeezi The Lantern | Official Website">
-    <meta property="og:description" content="Step into the vibe. Stream 'Catalinà' and explore high-res press kits.">
-    <meta property="og:image" content="https://jeezithelantern.com/me.jpg">
-    <meta property="og:url" content="https://jeezithelantern.com/">
-    <meta property="og:type" content="music.musician">
-
+    <title>Artist Name | Jeezi the lantern</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -28,10 +15,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             setTimeout(function() {
-                var intro = document.getElementById('intro-screen');
-                if(intro) {
-                    intro.classList.add('site-loaded');
-                }
+                document.getElementById('intro-screen').classList.add('site-loaded');
             }, 3500); 
         });
     </script>
@@ -40,6 +24,7 @@
         <div class="logo">JEEZI THE LANTERN</div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
+            <li><a href="#video">Video</a></li>
             <li><a href="#music">Music</a></li>
             <li><a href="#bio">Bio</a></li>
             <li><a href="#gallery">Photos</a></li>
@@ -48,112 +33,87 @@
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-content">
-            <span class="sub-label">R&B | Songwriter | Performer</span>
-            <h1>JEEZI THE LANTERN</h1>
-            <p>Redefining contemporary R&B with velvety vocals and a mesmerizing afro-fusion tapestry.</p>
-            <div class="hero-btns">
-                <a href="#music" class="btn primary-btn">Listen To Catalinà</a>
-                <a href="mailto:Jeezythelantern@gmail.com" class="btn secondary-btn">Book Artist</a>
+        <h1>JEEZI THE LANTERN</h1>
+        <a href="#music" class="btn">LISTEN TO CATALINÀ</a>
+    </section>
+
+    <section id="video" class="section">
+        <h2>Featured Video</h2>
+        <video controls style="width: 100%; max-width: 800px; border-radius: 10px;">
+            <source src="music video.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+    <section id="music" class="section alt-bg">
+        <h2>Latest Release</h2>
+        <div class="music-player-container">
+            <div class="track">
+                <p><strong>Catalinà</strong> - Single</p>
+                <audio controls>
+                    <source src="JEEZI THE LANTERN - CATALINA (prod.by Blaze Javu).mp3.mpeg" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
         </div>
     </section>
 
-    <main class="main-container">
+    <section id="bio" class="section">
+        <h2>Biography</h2>
         
-        <section id="video" class="section-card">
-            <div class="section-header">
-                <h2>Featured Video</h2>
-                <p>Watch the official promo video</p>
-            </div>
-            <div class="video-wrapper">
-                <video controls>
-                    <source src="music video.mp4" type="video/mp4">
-                    Your browser does not support the video element.
-                </video>
-            </div>
-            <div style="text-align: center; margin-top: 1.5rem;">
-                <a href="https://youtube.com/@jeezithelantern6996?si=fUByy8qwHlvnvhlw" target="_blank" class="text-link">Watch Full Visuals on YouTube <i class="fab fa-youtube"></i></a>
-            </div>
-        </section>
+        <img src="me.jpg" alt="Jeezi the Lantern" class="bio-pic">
 
-        <section id="music" class="section-card">
-            <div class="section-header">
-                <h2>Latest Release</h2>
-            </div>
-            <div class="music-box">
-                <div class="disc-icon"><i class="fas fa-compact-disc fa-spin"></i></div>
-                <div class="track-info">
-                    <h3>Catalinà</h3>
-                    <p>Single • Jeezi The Lantern</p>
-                    <audio controls class="audio-player">
-                        <source src="JEEZI THE LANTERN - CATALINA (prod.by Blaze Javu).mp3.mpeg" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
-                    <a href="JEEZI THE LANTERN - CATALINA (prod.by Blaze Javu).mp3.mpeg" download="Catalina - Jeezi The Lantern" class="download-btn">
-                        <i class="fas fa-download"></i> Download Track
-                    </a>
-                </div>
-            </div>
-        </section>
+        <div class="bio-text">
+            <p>Hailing from <strong>Lagos, Nigeria</strong>, Jeezi The Lantern is a contemporary R&B sensation redefining the genre. Blending the vocal fluidity of <em>The Weeknd</em> and <em>Chris Brown</em> with the afro-fusion energy of <em>Maleek Berry</em> and <em>Tekno</em>, Jeezi creates a sound that is both global and deeply rooted in his Nigerian experience.</p>
 
-        <section id="bio" class="section-card">
-            <div class="section-header">
-                <h2>Biography</h2>
-            </div>
-            <div class="bio-flex">
-                <div class="bio-img">
-                    <img src="me.jpg" alt="Jeezi The Lantern official press photo">
-                </div>
-                <div class="bio-text">
-                    <p>Hailing from <strong>Lagos, Nigeria</strong>, Jeezi The Lantern is a contemporary R&B sensation redefining the genre. Blending the vocal fluidity of <em>The Weeknd</em> and <em>Chris Brown</em> with the afro-fusion energy of <em>Maleek Berry</em> and <em>Tekno</em>.</p>
-                    <p>His breakout single, <strong>"Costain,"</strong> caught the attention of international tastemakers. <strong>The Pit London</strong> described the track as an <em>"absolute gem,"</em> praising his intricate melodies.</p>
-                    <blockquote class="quote">"A must-see live act with undeniable energy."</blockquote>
-                </div>
-            </div>
-        </section>
+            <p>His breakout single, <strong>"Costain,"</strong> has already caught the attention of international tastemakers. <strong>The Pit London</strong> described the track as an <em>"absolute gem,"</em> praising Jeezi's ability to weave "intricate melodies and rhythms into a mesmerizing sonic tapestry."</p>
 
-        <section id="gallery" class="section-card">
-            <div class="section-header">
-                <h2>Press Photos</h2>
-                <p>High-resolution assets for media use.</p>
-            </div>
-            <div class="photo-grid">
-                <img src="pic1.jpg" alt="Jeezi The Lantern performing live">
-                <img src="pic2.jpg" alt="Jeezi The Lantern promotional shot">
-            </div>
-            <div style="text-align: center; margin-top: 1.5rem;">
-                <a href="https://drive.google.com/drive/folders/1uICzz3iK5gz_Et6LYIoYSNcsBCF46dHF" target="_blank" class="text-link">Access Full Press Folder <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </section>
+            <p>Beyond the music, Jeezi is driven by a mission to address mental health, youth empowerment, and equality. With velvety vocals and an intimate connection to his listeners, Jeezi The Lantern is poised to leave a lasting mark on the R&B scene.</p>
 
-        <section id="contact" class="section-card">
-            <div class="section-header">
-                <h2>Bookings & Connect</h2>
-            </div>
-            <div class="connect-grid">
-                <div class="contact-details">
-                    <div class="con-row">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:Jeezythelantern@gmail.com">Jeezythelantern@gmail.com</a>
-                    </div>
-                    <div class="con-row">
-                        <i class="fab fa-whatsapp"></i>
-                        <a href="tel:+2349115654975">+234 911 565 4975</a>
-                    </div>
-                </div>
-                <div class="social-pills">
-                    <a href="https://www.instagram.com/jeeziithelantern" target="_blank" class="pill pill-insta"><i class="fab fa-instagram"></i> Instagram</a>
-                    <a href="https://open.spotify.com/artist/6kOlQtfehXBLcjUuHPxROf?si=-e4XNKPPQuSaViakPM0vGA" target="_blank" class="pill pill-spotify"><i class="fab fa-spotify"></i> Spotify</a>
-                    <a href="https://youtube.com/@jeezithelantern6996" target="_blank" class="pill pill-yt"><i class="fab fa-youtube"></i> YouTube</a>
-                </div>
-            </div>
-        </section>
+            <p><em>"A must-see live act with undeniable energy."</em> - Local Music Blog</p>
+        </div>
+    </section>
 
-    </main>
+    <section id="gallery" class="section alt-bg">
+        <h2>Press Photos</h2>
+        
+        <div class="gallery-grid">
+            <img src="pic1.jpg" alt="Photo 1">
+            <img src="pic2.jpg" alt="Photo 2">
+        </div>
+
+        <a href="#" class="download-btn">↓ DOWNLOAD HIGH-RES ASSETS</a>
+    </section>
+
+    <section id="contact" class="contact-section">
+        
+        <div class="booking-card">
+            <h2>BOOKINGS & INQUIRIES</h2>
+            
+            <div class="detail-item">
+                <span class="label">📧 EMAIL MANAGEMENT</span>
+                <a href="mailto:Jeezythelantern@gmail.com" class="booking-link">Jeezythelantern@gmail.com</a>
+            </div>
+
+            <div class="detail-item">
+                <span class="label">📱 PHONE / WHATSAPP</span>
+                <a href="tel:+2349115654975" class="booking-link">+234 911 565 4975</a>
+            </div>
+        </div>
+
+        <h3 class="connect-title">CONNECT</h3>
+        
+        <div class="bubble-container">
+            <a href="https://www.instagram.com/jeeziithelantern" class="social-bubble bubble-insta">INSTAGRAM</a>
+            <a href="#" class="social-bubble bubble-spotify">SPOTIFY</a>
+            <a href="https://youtube.com/@jeezithelantern6996" class="social-bubble bubble-youtube">YOUTUBE</a>
+        </div>
+
+    </section>
 
     <footer>
-        <p>© 2026 Jeezi The Lantern. Handcrafted by MERCIVIX.</p>
+        <p>© 2026 Jeezi the Lantern. Handcrafted by MERCIVIX.</p>
     </footer>
+
 </body>
 </html>
