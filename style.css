@@ -28,7 +28,9 @@ body {
     margin-left: auto;   /* Automatic left margin */
     margin-right: auto;  /* Automatic right margin */
     margin-bottom: 25px; /* Push the text down a bit */
-    /* Typography for the Bio */
+}
+
+/* Typography for the Bio */
 .bio-text {
     text-align: left;       /* Aligns text to the left (easier to read) */
     line-height: 1.8;       /* Adds more space between lines */
@@ -59,8 +61,6 @@ body {
     color: #ffcc00;         /* Gold */
     font-style: italic;
     font-family: serif;     /* Gives it a fancy "newspaper" look */
-}
-
 }
 
 /* Navigation */
@@ -168,30 +168,47 @@ audio {
     margin-top: 5px;
 }
 
-/* Gallery Grid */
-/* Gallery Grid for 2 Photos */
-.gallery-grid {
-    display: grid;
-    /* This forces exactly 2 columns on most screens */
-    grid-template-columns: 1fr 1fr; 
-    gap: 15px; /* Space between the two photos */
-    margin-bottom: 30px;
-}
-
-.gallery-grid img {
+/* NEW SLIDER CAROUSEL STYLES (Replaced old gallery grid) */
+.slider-container {
     width: 100%;
-    /* MADE TALLER: 300px makes them look much more important */
-    height: 300px;      
-    object-fit: cover;  /* Keeps them sharp without stretching */
+    max-width: 500px;
+    margin: 20px auto;
+    overflow: hidden;
     border-radius: 10px;
-    border: 2px solid #333; /* subtle dark border */
 }
 
-/* On very small phones, stack them (1 on top of another) */
-@media (max-width: 400px) {
-    .gallery-grid {
-        grid-template-columns: 1fr; /* Switch to 1 column */
-    }
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 350px; /* Kept that large, impressive photo feel */
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    border: 2px solid #333; /* Kept your subtle dark border */
+}
+
+/* Hides the scrollbar on the bottom so it looks super clean */
+.slider::-webkit-scrollbar {
+    display: none;
+}
+.slider {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
 }
 
 /* High-Res Download Button - "Power Style" */
