@@ -81,30 +81,37 @@
             <div class="slider">
                 <div class="slide">
                     <img src="pic1.jpg" alt="Photo 1">
+                    <input type="checkbox" class="download-checkbox" value="pic1.jpg">
                 </div>
                 <div class="slide">
                     <img src="pic2.jpg" alt="Photo 2">
+                    <input type="checkbox" class="download-checkbox" value="pic2.jpg">
                 </div>
                 
                 <div class="slide">
                     <img src="pic3.jpg" alt="Photo 3">
+                    <input type="checkbox" class="download-checkbox" value="pic3.jpg">
                 </div>
                 <div class="slide">
                     <img src="pic4.jpg" alt="Photo 4">
+                    <input type="checkbox" class="download-checkbox" value="pic4.jpg">
                 </div>
                 <div class="slide">
                     <img src="pic5.jpg" alt="Photo 5">
+                    <input type="checkbox" class="download-checkbox" value="pic5.jpg">
                 </div>
                 <div class="slide">
                     <img src="pic6.jpg" alt="Photo 6">
+                    <input type="checkbox" class="download-checkbox" value="pic6.jpg">
                 </div>
                 <div class="slide">
                     <img src="pic7.jpg" alt="Photo 7">
+                    <input type="checkbox" class="download-checkbox" value="pic7.jpg">
                 </div>
             </div>
         </div>
 
-        <a href="#" class="download-btn">↓ DOWNLOAD HIGH-RES ASSETS</a>
+        <button id="multi-download-btn" class="download-btn" style="border:none; cursor:pointer;">↓ DOWNLOAD SELECTED ASSETS</button>
     </section>
 
     <section id="contact" class="contact-section">
@@ -136,6 +143,27 @@
     <footer>
         <p>© 2026 Jeezi the Lantern. Handcrafted by MERCIVIX.</p>
     </footer>
+
+    <script>
+        document.getElementById('multi-download-btn').addEventListener('click', function() {
+            const selectedImages = document.querySelectorAll('.download-checkbox:checked');
+            
+            if (selectedImages.length === 0) {
+                alert('Please select at least one picture to download!');
+                return;
+            }
+
+            selectedImages.forEach(function(checkbox) {
+                const imageUrl = checkbox.value;
+                const link = document.createElement('a');
+                link.href = imageUrl;
+                link.download = imageUrl; 
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+        });
+    </script>
 
 </body>
 </html>
