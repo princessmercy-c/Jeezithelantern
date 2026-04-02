@@ -191,6 +191,7 @@ audio {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; /* Crucial for positioning the floating checkbox */
 }
 
 .slide img {
@@ -561,4 +562,16 @@ footer {
     .typing-text {
         font-size: 1.5rem; /* Smaller on phone */
     }
+}
+
+/* --- Floating Checkbox for Photos --- */
+.download-checkbox {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    accent-color: #ffcc00; /* Makes the checkbox gold to match your brand */
+    z-index: 10;
 }
