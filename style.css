@@ -575,3 +575,30 @@ footer {
     accent-color: #ffcc00; /* Makes the checkbox gold to match your brand */
     z-index: 10;
 }
+
+/* --- MAKING SOCIAL BUBBLES POP HARDER --- */
+.social-bubble:hover {
+    transform: scale(1.2) translateY(-5px) !important; /* Makes it grow bigger and lift higher */
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.8) !important; /* Super intense gold glow */
+    background: #ffcc00 !important;
+    color: #000 !important;
+}
+
+/* --- MAKING CALLS TO ACTION BOLDER --- */
+.btn {
+    font-weight: 900 !important; /* Maximum thickness */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.5); /* Adds a subtle orange glow to the top hero button */
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 69, 0, 0.8); /* Glows brighter on hover */
+}
+
+.download-btn {
+    font-weight: 900 !important; /* Maximum thickness for download button too */
+}
+
